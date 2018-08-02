@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBBBD704-60CA-4C5F-A940-30D6EDEFEED9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebItBusiness</RootNamespace>
+    <AssemblyName>WebItBusiness</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Webit.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CarlosAg.ExcelXmlWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport">
+      <HintPath>..\Spire.DataExport.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr">
+      <HintPath>..\Spire.DataExport.ResourceMgr.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UtilityClasses\AppSettingsMgr.cs" />
+    <Compile Include="UtilityClasses\Csv\CachedCsvReader.cs" />
+    <Compile Include="UtilityClasses\Csv\CachedCsvReader.CsvBindingList.cs" />
+    <Compile Include="UtilityClasses\Csv\CachedCsvReader.CsvPropertyDescriptor.cs" />
+    <Compile Include="UtilityClasses\Csv\CachedCsvReader.CsvRecordComparer.cs" />
+    <Compile Include="UtilityClasses\Csv\CsvReader.cs" />
+    <Compile Include="UtilityClasses\Csv\CsvReader.DataReaderValidations.cs" />
+    <Compile Include="UtilityClasses\Csv\CsvReader.RecordEnumerator.cs" />
+    <Compile Include="UtilityClasses\Csv\Events\ParseErrorEventArgs.cs" />
+    <Compile Include="UtilityClasses\Csv\Exceptions\MalformedCsvException.cs" />
+    <Compile Include="UtilityClasses\Csv\Exceptions\MissingFieldCsvException.cs" />
+    <Compile Include="UtilityClasses\Csv\MissingFieldAction.cs" />
+    <Compile Include="UtilityClasses\Csv\ParseErrorAction.cs" />
+    <Compile Include="UtilityClasses\Csv\Resources\ExceptionMessage.Designer.cs" />
+    <Compile Include="UtilityClasses\ExcelAdo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UtilityClasses\ExcelReader.cs" />
+    <Compile Include="UtilityClasses\wiEmail.cs" />
+    <Compile Include="Security\SecurityLevel.cs" />
+    <Compile Include="UtilityClasses\wiFile.cs" />
+    <Compile Include="wiContact.cs" />
+    <Compile Include="UtilityClasses\wiExcel.cs" />
+    <Compile Include="wiMiscCode.cs" />
+    <Compile Include="Security\ActiveDirectory.cs" />
+    <Compile Include="Security\DpDecryptor.cs" />
+    <Compile Include="Security\DpEncryptor.cs" />
+    <Compile Include="Security\KeyGenerator.cs" />
+    <Compile Include="wiSecurity.cs" />
+    <Compile Include="wiUser.cs" />
+    <Compile Include="UtilityClasses\ExcelWriter.cs" />
+    <Compile Include="Security\KeyDecryptor.cs" />
+    <Compile Include="Security\KeyDecryptTransformer.cs" />
+    <Compile Include="Security\KeyEncryptor.cs" />
+    <Compile Include="Security\KeyEncryptTransformer.cs" />
+    <Compile Include="Security\PasswordGenerator.cs" />
+    <Compile Include="UtilityClasses\wiString.cs" />
+    <Compile Include="wiBusinessObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wiUserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UtilityClasses\Csv\Resources\ExceptionMessage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Webit.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
