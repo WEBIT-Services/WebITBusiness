@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebItBusiness", "WebItBusiness.csproj", "{DBBBD704-60CA-4C5F-A940-30D6EDEFEED9}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5D99466B-812F-4AA3-94DD-AE755B637A21}
+		SolutionGuid = {F47880A5-30D5-4600-91BF-CC6A33167635}
 	EndGlobalSection
 EndGlobal
