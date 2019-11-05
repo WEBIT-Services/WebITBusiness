@@ -10,12 +10,22 @@ namespace WebItBusiness.UtilityClasses
 {
     public class wiSendGrid
     {
-        private string ApiKey
+        private static string ApiKey
         {
             get => System.Configuration.ConfigurationManager.AppSettings["SendGridAPIKey"].ToString();
         }
 
-        public void SendEmail(string fromAddress, string fromName, string toAddress, string toName, string subject, string emailBody, bool isHtml)
+        /// <summary>
+        /// Send an email using the SendGrid service. The SendGridAPIKey api key MUST be in your project's application config file!
+        /// </summary>
+        /// <param name="fromAddress">The email address to use as the FROM address</param>
+        /// <param name="fromName">The person's name/description to use in the FROM address</param>
+        /// <param name="toAddress">The email address to use as the TO address</param>
+        /// <param name="toName">The person's name/description to use in the TO address</param>
+        /// <param name="subject">The Subject for the email</param>
+        /// <param name="emailBody">The Body of the email</param>
+        /// <param name="isHtml">Flag that specifies if the Body contains HTML and should be displayed as such in the mail client</param>
+        public static void SendEmail(string fromAddress, string fromName, string toAddress, string toName, string subject, string emailBody, bool isHtml)
         {
             var client = new SendGridClient(ApiKey);
             EmailAddress from = new EmailAddress(fromAddress, fromName);
