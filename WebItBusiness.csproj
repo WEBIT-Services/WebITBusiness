@@ -66,13 +66,15 @@
   <ItemGroup>
     <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CarlosAg.ExcelXmlWriter.dll</HintPath>
+      <HintPath>..\..\Bin_Dlls\CarlosAg.ExcelXmlWriter.dll</HintPath>
     </Reference>
-    <Reference Include="Spire.DataExport">
-      <HintPath>..\Spire.DataExport.dll</HintPath>
+    <Reference Include="Spire.DataExport, Version=2.0.3.0, Culture=neutral, PublicKeyToken=4ce5fd19e1a3a67d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin_Dlls\Spire.DataExport.dll</HintPath>
     </Reference>
-    <Reference Include="Spire.DataExport.ResourceMgr">
-      <HintPath>..\Spire.DataExport.ResourceMgr.dll</HintPath>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=2.0.3.0, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin_Dlls\Spire.DataExport.ResourceMgr.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -104,6 +106,7 @@
     <Compile Include="UtilityClasses\wiEmail.cs" />
     <Compile Include="Security\SecurityLevel.cs" />
     <Compile Include="UtilityClasses\wiFile.cs" />
+    <Compile Include="wiBusinessObjectOdbc.cs" />
     <Compile Include="wiContact.cs" />
     <Compile Include="UtilityClasses\wiExcel.cs" />
     <Compile Include="wiMiscCode.cs" />
