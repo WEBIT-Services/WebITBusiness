@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,18 @@ namespace WebItBusiness.UtilityClasses
             string HtmlBody = (isHtml ? emailBody : string.Empty);
 
             SendGridMessage msg = MailHelper.CreateSingleEmail(from, to, subject, TextBody, HtmlBody);
+            client.SendEmailAsync(msg).Wait();
+        }
+        public static void SendEmailWAtt(string fromAddress, string fromName, string toAddress, string toName, string subject, string emailBody, MemoryStream ms, string fileName, bool isHtml)
+        {
+            var client = new SendGridClient(ApiKey);
+            EmailAddress from = new EmailAddress(fromAddress, fromName);
+            EmailAddress to = new EmailAddress(toAddress, toName);
+            string TextBody = (isHtml ? string.Empty : emailBody);
+            string HtmlBody = (isHtml ? emailBody : string.Empty);
+
+            SendGridMessage msg = MailHelper.CreateSingleEmail(from, to, subject, TextBody, HtmlBody);
+            msg.AddAttachmentAsync(fileName, ms);
             client.SendEmailAsync(msg).Wait();
         }
     }
